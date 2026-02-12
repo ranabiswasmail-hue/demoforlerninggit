@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- LEFT: FORM SECTION -->
+    <div class="form-section">
+        <h2>Resume Builder</h2>
+
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="text" id="title" placeholder="Job Title">
+        <textarea id="summary" placeholder="Profile Summary"></textarea>
+        <input type="text" id="phone" placeholder="Phone">
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="address" placeholder="Address">
+
+        <h3>Skills</h3>
+        <div id="skills-container"></div>
+        <button onclick="addSkill()">+ Add Skill</button>
+
+        <h3>Education</h3>
+        <div id="education-container"></div>
+        <button onclick="addEducation()">+ Add Education</button>
+
+        <h3>Experience</h3>
+        <div id="experience-container"></div>
+        <button onclick="addExperience()">+ Add Experience</button>
+
+        <div class="btn-group">
+            <button onclick="downloadPDF()">Download PDF</button>
+            <button onclick="clearData()">Clear All</button>
+        </div>
+    </div>
+
+    <!-- RIGHT: PREVIEW SECTION -->
+    <div class="preview-section" id="resume-preview">
+        <h1 id="preview-name"></h1>
+        <h3 id="preview-title"></h3>
+        <p id="preview-summary"></p>
+
+        <p><strong>Phone:</strong> <span id="preview-phone"></span></p>
+        <p><strong>Email:</strong> <span id="preview-email"></span></p>
+        <p><strong>Address:</strong> <span id="preview-address"></span></p>
+
+        <h3>Skills</h3>
+        <ul id="preview-skills"></ul>
+
+        <h3>Education</h3>
+        <div id="preview-education"></div>
+
+        <h3>Experience</h3>
+        <div id="preview-experience"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
